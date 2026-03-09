@@ -1,0 +1,122 @@
+---
+const navLinks = [
+  { label: "//photos", href: "/photos" },
+  { label: "//graphics", href: "/graphics" },
+  { label: "//about me", href: "/about" },
+];
+---
+
+<header class="w-full bg-white z-50">
+  <nav class="max-w-7xl mx-auto px-8 md:px-12 py-5 flex items-center justify-between">
+    <!-- Left: Nav links (desktop) -->
+    <ul class="hidden md:flex gap-6 text-sm font-light">
+      {navLinks.map((link) => (
+        <li>
+          <a href={link.href} class="text-gray-500 hover:text-black transition-colors">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Center: Name -->
+    <a href="/" class="absolute left-1/2 -translate-x-1/2 text-lg font-normal tracking-tight text-gray-900">
+      Andrea Allodi
+    </a>
+
+    <!-- Right: Social icons (desktop) -->
+    <div class="hidden md:flex items-center gap-5">
+      <a href="#" aria-label="LinkedIn" class="text-gray-500 hover:text-black transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Instagram" class="text-gray-500 hover:text-black transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="#" aria-label="Email" class="text-gray-500 hover:text-black transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Hamburger button (mobile) -->
+    <button id="menu-toggle" class="md:hidden z-50 ml-auto flex flex-col justify-center items-center w-8 h-8" aria-label="Apri menu">
+      <span class="hamburger-line block w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+      <span class="hamburger-line block w-6 h-0.5 bg-gray-800 mt-1.5 transition-all duration-300"></span>
+      <span class="hamburger-line block w-6 h-0.5 bg-gray-800 mt-1.5 transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden">
+    <ul class="flex flex-col items-center gap-6 text-2xl font-light">
+      {navLinks.map((link) => (
+        <li>
+          <a href={link.href} class="text-gray-600 hover:text-black transition-colors">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <div class="flex items-center gap-6 mt-4">
+      <a href="#" aria-label="LinkedIn" class="text-gray-500 hover:text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Instagram" class="text-gray-500 hover:text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="#" aria-label="Email" class="text-gray-500 hover:text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const lines = document.querySelectorAll(".hamburger-line");
+
+  let isOpen = false;
+
+  toggle?.addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      menu?.classList.remove("translate-x-full");
+      menu?.classList.add("translate-x-0");
+      // Animate to X
+      if (lines[0]) {
+        (lines[0] as HTMLElement).style.transform = "rotate(45deg) translate(4px, 4px)";
+      }
+      if (lines[1]) {
+        (lines[1] as HTMLElement).style.opacity = "0";
+      }
+      if (lines[2]) {
+        (lines[2] as HTMLElement).style.transform = "rotate(-45deg) translate(4px, -4px)";
+      }
+    } else {
+      menu?.classList.add("translate-x-full");
+      menu?.classList.remove("translate-x-0");
+      lines.forEach((line) => {
+        (line as HTMLElement).style.transform = "";
+        (line as HTMLElement).style.opacity = "";
+      });
+    }
+  });
+</script>

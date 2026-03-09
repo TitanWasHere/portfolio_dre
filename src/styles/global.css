@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /*--font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;*/
+  --font-script: "Pinyon Script", cursive;
+  --font-sans: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  /*Increment text size*/
+  font-size: 4rem;
+  letter-spacing: 0.02em;
+}
+
+a, button {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
