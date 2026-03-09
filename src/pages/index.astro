@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import heroImage from '../assets/test.png';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Andrea Allodi" bare>
@@ -16,7 +17,7 @@ import heroImage from '../assets/test.png';
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
       <h1 class="text-4xl md:text-6xl font-light tracking-wide mb-12">Andrea Allodi</h1>
       <a
-        href="/photos"
+        href={`${base}/photos`}
         class="border border-white/60 px-8 py-3 text-sm font-light tracking-widest hover:bg-white/10 transition-colors"
       >
         //discover

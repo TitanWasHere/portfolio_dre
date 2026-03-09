@@ -14,13 +14,14 @@ export async function getStaticPaths() {
 const { entry, collection } = Astro.props;
 const { title, images, date } = entry.data;
 const year = date.getFullYear();
-const backLink = '/photos';
+const backLink = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/photos`;
 
 const allEntries = await getCollection('photos');
 const others = allEntries.filter((e) => e.id !== entry.id);
 const recommended = others.length > 0
   ? others[Math.floor(Math.random() * others.length)]
   : null;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title={`${title} — Andrea Allodi`}>
@@ -54,7 +55,7 @@ const recommended = others.length > 0
   {recommended && (
     <section class="max-w-4xl mx-auto px-6 md:px-12 pb-16">
       <h3 class="text-center text-sm text-gray-400 mb-8 tracking-wide">Check something else ;)</h3>
-      <a href={`/album/photos/${recommended.id.replace(/\.md$/, '')}`} class="block group">
+      <a href={`${base}/album/photos/${recommended.id.replace(/\.md$/, '')}`} class="block group">
         <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div class="w-full md:w-1/2 overflow-hidden relative">
             <Image

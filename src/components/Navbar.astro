@@ -1,8 +1,9 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const navLinks = [
-  { label: "//photos", href: "/photos" },
-  { label: "//graphics", href: "/graphics" },
-  { label: "//about me", href: "/about" },
+  { label: "//photos", href: `${base}/photos` },
+  { label: "//graphics", href: `${base}/graphics` },
+  { label: "//about me", href: `${base}/about` },
 ];
 ---
 
@@ -20,7 +21,7 @@ const navLinks = [
     </ul>
 
     <!-- Center: Name -->
-    <a href="/" class="absolute left-1/2 -translate-x-1/2 text-lg font-normal tracking-tight text-gray-900">
+    <a href={`${base}/`} class="absolute left-1/2 -translate-x-1/2 text-lg font-normal tracking-tight text-gray-900">
       Andrea Allodi
     </a>
 
