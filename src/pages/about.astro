@@ -32,61 +32,37 @@ import profileImage from '../assets/dre.jpeg';
     </div>
   </section>
 
-  <!-- Contact form -->
-  <section class="max-w-lg mx-auto px-8 pb-24">
-    <h2 class="text-center text-xl md:text-2xl font-normal tracking-tight mb-10">Contact me!</h2>
+  <!-- Contact links -->
+  <section class="max-w-2xl mx-auto px-8 pb-24 text-center">
+    <h2 class="text-center text-xl md:text-2xl font-normal tracking-tight mb-6">Contact me!</h2>
+    <p class="text-sm md:text-base font-light text-gray-700">
+      Contact me on the following mail <i> eallo00@gmail.com </i> or on my Instagram <i> @andreaaallodi </i> for any inquiries, collaborations or just to say hi!
+    </p>
 
-    <form class="space-y-4">
-      <div>
-        <label for="name" class="block text-sm font-light text-gray-800 mb-2">
-          your name <span class="text-red-500">*</span>
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Il tuo nome e cognome"
-          required
-          class="w-full border border-gray-800 px-4 py-2.5 text-sm font-light placeholder-gray-400 focus:outline-none focus:border-black"
-        />
-      </div>
-
-      <div>
-        <label for="email" class="block text-sm font-light text-gray-800 mb-2">
-          your email <span class="text-red-500">*</span>
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Il tuo indirizzo email"
-          required
-          class="w-full border border-gray-800 px-4 py-2.5 text-sm font-light placeholder-gray-400 focus:outline-none focus:border-black"
-        />
-      </div>
-
-      <div>
-        <label for="message" class="block text-sm font-light text-gray-800 mb-2">
-          message to send <span class="text-red-500">*</span>
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Il tuo messaggio"
-          required
-          class="w-full border border-gray-800 px-4 py-2.5 text-sm font-light placeholder-gray-400 focus:outline-none focus:border-black resize-y"
-        ></textarea>
-      </div>
-
-      <div class="text-center">
-        <button
-          type="submit"
-          class="text-sm font-light text-gray-800 hover:text-black transition-colors underline underline-offset-4"
-        >
-          send
-        </button>
-      </div>
-    </form>
+    <div class="mt-6 flex items-center justify-center gap-5">
+      <a
+        href="mailto:eaallo00@gmail.com"
+        aria-label="Email"
+        class="text-gray-600 hover:text-black transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </a>
+      <a
+        href="https://www.instagram.com/andreaaallodi/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        class="text-gray-600 hover:text-black transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+    </div>
   </section>
 </Layout>
