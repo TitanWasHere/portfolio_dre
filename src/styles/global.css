@@ -2,7 +2,7 @@
 
 @theme {
   /*--font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;*/
-  --font-script: "Pinyon Script", cursive;
+  --font-script: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
   --font-sans: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
 }
 
@@ -12,8 +12,6 @@ html {
 
 body {
   font-weight: 400;
-  /*Increment text size*/
-  font-size: 4rem;
   letter-spacing: 0.02em;
 }
 
