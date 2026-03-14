@@ -2,7 +2,7 @@
 title: "Animegirl"
 description: ""
 images:
-  - "../../assets/graphic/animegirl/decisioni.jpg"
+  - "../../assets/graphic/animegirl/Decisioni.jpg"
   - "../../assets/graphic/animegirl/Man3.jpg"
   - "../../assets/graphic/animegirl/Time3.jpg"
   
