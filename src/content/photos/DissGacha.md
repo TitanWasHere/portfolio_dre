@@ -1,0 +1,26 @@
+---
+title: "DissGacha"
+description: "Festa radio onda d'urto - Brescia"
+images:
+- "../../assets/photography/Dissgacha/1.jpg"
+- "../../assets/photography/Dissgacha/2.jpg"
+- "../../assets/photography/Dissgacha/3.jpg"
+- "../../assets/photography/Dissgacha/4.jpg"
+- "../../assets/photography/Dissgacha/5.jpg"
+- "../../assets/photography/Dissgacha/6.jpg"
+- "../../assets/photography/Dissgacha/7.jpg"
+- "../../assets/photography/Dissgacha/8.jpg"
+- "../../assets/photography/Dissgacha/9.jpg"
+- "../../assets/photography/Dissgacha/10.jpg"
+- "../../assets/photography/Dissgacha/11.jpg"
+- "../../assets/photography/Dissgacha/12.jpg"
+- "../../assets/photography/Dissgacha/13.jpg"
+- "../../assets/photography/Dissgacha/14.jpg"
+- "../../assets/photography/Dissgacha/15.jpg"
+- "../../assets/photography/Dissgacha/16.jpg"
+- "../../assets/photography/Dissgacha/17.jpg"
+- "../../assets/photography/Dissgacha/18.jpg"
+- "../../assets/photography/Dissgacha/19.jpg"
+- "../../assets/photography/Dissgacha/20.jpg"
+date: 2026-08-01
+---
